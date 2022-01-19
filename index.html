@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Login | Registration Form</title>
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
+<script src="script.js"></script>
+<!--<meta http-equiv="refresh" content="5">-->
+<body>
+<div class="container">
+<div class="card">
+<div class="inner-box" id="card">
+<div class="card-front">
+<h2>LOGIN</h2>
+<div id="error_message"></div>
+
+<form method="POST" id="form" onsubmit="return validation()">
+<input id="email" name="email" type="email" required="required" class="input-box" placeholder="Enter Your Email" >
+<input id="password" name="password" type="password" required="required" class="input-box" placeholder="Enter Your password" >
+<input type="checkbox" class="span"><span>Remember Me</span>
+<button type="submit" class="btn" >Submit</button>
+</form>
+<button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+<a href="https://www.google.com">Forgot password</a>
+</div>
+<div class="card-back">
+<h2>REGISTER</h2>
+<form method="POST"id="form" onsubmit="return validate()">
+<input id="name" name="name" type="text" required="required" class="input-box" placeholder="Enter Your Name" >
+<input id="email" name="email" type="email" required="required" class="input-box" placeholder="Enter Your Email" >
+<input id="password" name="password" type="password"required="required" class="input-box" placeholder="Enter Your password" >
+<input type="checkbox" class="span"><span>Remember Me</span>
+<button type="submit" class="btn">Submit</button>
+</form>
+<button type="button" class="btn" onclick="openLogin()">I've an Account</button>
+<a href="https://www.google.com">Forgot password</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+/*function Submit(){
+alert('Submitted Sucessfully')
+}*/
+var card = document.getElementById("card");
+function openRegister(){
+card.style.transform = "rotateY(-180deg)";
+}
+function openLogin(){
+card.style.transform = "rotateY(0deg)";
+}
+</script>
+</body>
+</head>
+</html>
